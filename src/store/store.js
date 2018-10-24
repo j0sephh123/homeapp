@@ -43,5 +43,6 @@ export default new Vuex.Store({
   getters: {
     redirect: state => state.redirect,
     sideNav: state => state.sideMenu.items,
+    activeItem: state => state.sideMenu.items.filter(i => i.active === true)[0],
   }
 })

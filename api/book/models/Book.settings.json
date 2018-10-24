@@ -30,6 +30,10 @@
     "thoughts": {
       "default": "",
       "type": "text"
+    },
+    "characters": {
+      "collection": "character",
+      "via": "book"
     }
   }
 }

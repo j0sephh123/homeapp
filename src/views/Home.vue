@@ -1,13 +1,22 @@
 <template>
   <div>
-    {{sideNav}}
+    
+    <books v-if="activeItem.name === 'books'"></books>
+    <foods v-else-if="activeItem.name === 'foods'"></foods>
+    
   </div>
 </template>
 
 <script>
 import {mapActions, mapGetters} from 'vuex'
+import BooksVue from '../SideNav/Books/Books.vue';
+import FoodsVue from '../SideNav/Foods/Foods.vue';
 
 export default {
+  components: {
+    books: BooksVue,
+    foods: FoodsVue,
+  },
   data() {
     return {
       note: '',
@@ -20,7 +29,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      sideNav: 'sideNav',
+      activeItem: 'activeItem',
     })
   },
   async mounted(){

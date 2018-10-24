@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "character",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "bio": {
+      "default": "",
+      "type": "string"
+    },
+    "book": {
+      "model": "book",
+      "via": "characters"
+    }
+  }
+}
