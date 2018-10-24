@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "book",
+  "info": {
+    "name": "book",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "author": {
+      "default": "",
+      "type": "string"
+    },
+    "readingStatus": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "toread",
+        "reading",
+        "read",
+        "failed"
+      ]
+    },
+    "thoughts": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}
