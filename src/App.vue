@@ -8,16 +8,21 @@
     </div>
 
     <div class="navbar-end">
-    
+    {{ui}}
     </div>
     
   </nav>
 
   <div class="columns section">
-    <div class="column is-2 border">
+    <div
+      class="column border is-2 ">
       <side-menu></side-menu>
     </div>
-    <div class="column is-10 border">
+    <div class="column border is-10">
+      <div class="box">
+        <i class="fas fa-lg fa-chevron-left"></i>
+      </div>
+      
       <router-view/>
     </div>
   </div> <!-- main -->
@@ -42,7 +47,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      
+      ui: 'ui'
     })
   },
   watch: {

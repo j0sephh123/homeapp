@@ -19,6 +19,11 @@ export default new Vuex.Store({
         {_id: 2, name: 'foods', active: false},
       ],
     },
+    ui: {
+      sidebarSize: ' 2',
+      routerViewSize: '10',
+      chevron: 'left',
+    },
   },
   mutations: {
     toggle(state, {id}) {
@@ -42,6 +47,7 @@ export default new Vuex.Store({
   },
   getters: {
     redirect: state => state.redirect,
+    ui: state => state.ui,
     sideNav: state => state.sideMenu.items,
     activeItem: state => state.sideMenu.items.filter(i => i.active === true)[0],
   }
